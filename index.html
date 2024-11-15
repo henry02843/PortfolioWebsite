@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henry Hoffman</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            margin: 20px;
+            background-color: #ffffff;
+            color: #000;
+            line-height: 1.6;
+        }
+        header, footer {
+            background-color: #e0e0e0;
+            color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5em; /* Larger name */
+            margin-bottom: 5px; /* Adjust space between name and subtitle */
+        }
+        header h2 {
+            margin-top: 0;
+            font-size: 1em; /* Smaller subtitle */
+            font-style: italic;
+        }
+        section {
+            margin-bottom: 20px;
+            text-align: center; /* Center align section headers */
+        }
+        section h2 {
+            font-size: 2em; /* Larger section titles */
+            cursor: pointer; /* Indicate clickable */
+        }
+        .video {
+            margin: 20px auto;
+            max-width: 800px; /* Max width for larger screens */
+        }
+        .video h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.2em;
+        }
+        .video iframe {
+            width: 100%;
+            height: calc((100% / 16) * 9); /* Maintain 16:9 aspect ratio */
+            max-height: 450px; /* Limit the height */
+            max-width: 100%;
+        }
+        .hidden {
+            display: none;
+        }
+        @media (min-width: 768px) {
+            body {
+                margin: 40px 80px;
+            }
+            .video iframe {
+                height: calc((100vw - 160px) * 9 / 16); /* Maintain 16:9 aspect ratio for larger screens */
+            }
+        }
+    </style>
+    <script>
+        function toggleSection() {
+            const section = document.getElementById('video-games-section');
+            section.classList.toggle('hidden');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Henry Hoffman</h1>
+        <h2>Composer/Producer/Sound Designer</h2>
+    </header>
+
+    <section>
+        <h2 onclick="toggleSection()">Video Games</h2>
+        <div id="video-games-section" class="hidden">
+            <div class="video">
+                <h3>BLIGHTWRECK (2025)</h3>
+                <iframe src="https://www.youtube.com/embed/3Gagd9e3d_E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video">
+                <h3>PSYCRON (2021)</h3>
+                <iframe src="https://www.youtube.com/embed/cHr534dBMh8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <!-- Add more video sections as needed -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Henry Hoffman</p>
+    </footer>
+</body>
+</html>
