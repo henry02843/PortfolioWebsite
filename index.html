@@ -11,12 +11,14 @@
             background-color: #ffffff;
             color: #000;
             line-height: 1.6;
+			
         }
         header, footer {
-            background-color: #e0e0e0;
+            background-color: white;
             color: #333;
             padding: 10px;
             text-align: center;
+			background-image:url('ducky.gif'); background-repeat:repeat;
         }
         header h1 {
             font-size: 2.5em; /* Larger name */
@@ -26,14 +28,15 @@
             margin-top: 0;
             font-size: 1em; /* Smaller subtitle */
             font-style: italic;
+			text-align: center;
         }
         section {
             margin-bottom: 20px;
-            text-align: center; /* Center align section headers */
+            text-align: left; /* Left align everything */
         }
         section h2 {
             font-size: 2em; /* Larger section titles */
-            cursor: pointer; /* Indicate clickable */
+			text-align: center;
         }
         .video {
             margin: 20px auto;
@@ -49,9 +52,6 @@
             max-height: 450px; /* Limit the height */
             max-width: 100%;
         }
-        .hidden {
-            display: none;
-        }
         @media (min-width: 768px) {
             body {
                 margin: 40px 80px;
@@ -61,12 +61,6 @@
             }
         }
     </style>
-    <script>
-        function toggleSection() {
-            const section = document.getElementById('video-games-section');
-            section.classList.toggle('hidden');
-        }
-    </script>
 </head>
 <body>
     <header>
@@ -75,22 +69,21 @@
     </header>
 
     <section>
-        <h2 onclick="toggleSection()">Video Games</h2>
-        <div id="video-games-section" class="hidden">
-            <div class="video">
-                <h3>BLIGHTWRECK (2025)</h3>
-                <iframe src="https://www.youtube.com/embed/3Gagd9e3d_E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="video">
-                <h3>PSYCRON (2021)</h3>
-                <iframe src="https://www.youtube.com/embed/cHr534dBMh8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <!-- Add more video sections as needed -->
+        <h2>Video Games</h2>
+        <div class="video">
+            <h3>BLIGHTWRECK (2025)</h3>
+            <iframe src="https://www.youtube.com/embed/3Gagd9e3d_E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
+        <div class="video">
+            <h3>PSYCRON (2021)</h3>
+            <iframe src="https://www.youtube.com/embed/cHr534dBMh8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <!-- Add more video sections as needed -->
     </section>
 
     <footer>
         <p>&copy; 2024 Henry Hoffman</p>
+		<p>"Stan_Vanhoof_3D-props_Ducky_2024" (https://skfb.ly/oPQJ9) by baka_boi3000 is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).</p>
     </footer>
 </body>
 </html>
